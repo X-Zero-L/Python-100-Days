@@ -49,8 +49,8 @@ def main():
     print(soup.body.p.contents)
     for p_child in soup.body.p.children:
         print(p_child)
-    print(len([elem for elem in soup.body.children]))
-    print(len([elem for elem in soup.body.descendants]))
+    print(len(list(soup.body.children)))
+    print(len(list(soup.body.descendants)))
     print(soup.findAll(re.compile(r'^h[1-6]')))
     print(soup.body.find_all(r'^h'))
     print(soup.body.div.find_all(re.compile(r'^h')))

@@ -33,14 +33,11 @@ def main():
         os.system('clear')
         print_board(curr_board)
         while counter < 9:
-            move = input('轮到%s走棋, 请输入位置: ' % turn)
+            move = input(f'轮到{turn}走棋, 请输入位置: ')
             if curr_board[move] == ' ':
                 counter += 1
                 curr_board[move] = turn
-                if turn == 'x':
-                    turn = 'o'
-                else:
-                    turn = 'x'
+                turn = 'o' if turn == 'x' else 'x'
             os.system('clear')
             print_board(curr_board)
         choice = input('再玩一局?(yes|no)')

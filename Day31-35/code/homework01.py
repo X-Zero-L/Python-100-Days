@@ -6,15 +6,11 @@
 
 
 def f(n: int, m=1) -> int:
-    if n == 0 or n == 1:
-        return m
-    return f(n - 1, n * m)
+    return m if n in {0, 1} else f(n - 1, n * m)
 
 
 def sum(n: int) -> int:
-    if n == 1:
-        return 1
-    return n + sum(n - 1)
+    return 1 if n == 1 else n + sum(n - 1)
 
 
 def steps(n: int, m={}) -> int:

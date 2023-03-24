@@ -29,7 +29,7 @@ class Point(object):
         return sqrt(dx ** 2 + dy ** 2)
 
     def __str__(self):
-        return '(%s, %s)' % (str(self._x), str(self._y))
+        return f'({str(self._x)}, {str(self._y)})'
 
 
 class Line(object):

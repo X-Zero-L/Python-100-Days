@@ -6,6 +6,7 @@ Author: 骆昊
 Date: 2018-03-19
 """
 
+
 import pyperclip
 
 # 转义字符
@@ -23,7 +24,7 @@ print(str.isalnum())
 # 字符串是否只包含数字
 print(str.isdecimal())
 
-print(str[0:5].isalpha())
+print(str[:5].isalpha())
 print(str[5:8].isdecimal())
 
 list = ['床前明月光', '疑是地上霜', '举头望明月', '低头思故乡']

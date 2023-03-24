@@ -20,15 +20,15 @@ class Student(object):
         self.age = age
 
     def study(self, course_name):
-        print('%s正在学习%s.' % (self.name, course_name))
+        print(f'{self.name}正在学习{course_name}.')
 
     # PEP 8要求标识符的名字用全小写多个单词用下划线连接
     # 但是很多程序员和公司更倾向于使用驼峰命名法(驼峰标识)
     def watch_av(self):
         if self.age < 18:
-            print('%s只能观看《熊出没》.' % self.name)
+            print(f'{self.name}只能观看《熊出没》.')
         else:
-            print('%s正在观看岛国大电影.' % self.name)
+            print(f'{self.name}正在观看岛国大电影.')
 
 
 def main():

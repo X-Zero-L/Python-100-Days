@@ -23,7 +23,7 @@ class Circle(object):
 
     @radius.setter
     def radius(self, radius):
-        self._radius = radius if radius > 0 else 0
+        self._radius = max(radius, 0)
 
     @property
     def perimeter(self):

@@ -15,11 +15,9 @@ from time import sleep
 
 
 def sub_task(string, q):
-    number = q.get()
-    while number:
+    while number := q.get():
         print('%d: %s' % (number, string))
         sleep(0.001)
-        number = q.get()
 
 
 def main():

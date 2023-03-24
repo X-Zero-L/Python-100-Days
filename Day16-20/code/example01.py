@@ -23,10 +23,7 @@ import numpy
 
 def seq_search(items: list, elem) -> int:
     """顺序查找"""
-    for index, item in enumerate(items):
-        if elem == item:
-            return index
-    return -1
+    return next((index for index, item in enumerate(items) if elem == item), -1)
 
 
 def bin_search(items, elem):
@@ -48,9 +45,9 @@ def main():
     num = 6
     styles = ['r-.', 'g-*', 'b-o', 'y-x', 'c-^', 'm-+', 'k-d']
     legends = ['对数', '线性', '线性对数', '平方', '立方', '几何级数', '阶乘']
-    x_data = [x for x in range(1, num + 1)]
+    x_data = list(range(1, num + 1))
     y_data1 = [log2(y) for y in range(1, num + 1)]
-    y_data2 = [y for y in range(1, num + 1)]
+    y_data2 = list(range(1, num + 1))
     y_data3 = [y * log2(y) for y in range(1, num + 1)]
     y_data4 = [y ** 2 for y in range(1, num + 1)]
     y_data5 = [y ** 3 for y in range(1, num + 1)]

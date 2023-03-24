@@ -73,7 +73,7 @@ class Spider(object):
             netloc = parser.netloc or domain
             if scheme != 'javascript' and netloc == domain:
                 path = parser.path
-                query = '?' + parser.query if parser.query else ''
+                query = f'?{parser.query}' if parser.query else ''
                 full_url = f'{scheme}://{netloc}{path}{query}'
                 if full_url not in visited_urls:
                     url_links.append(full_url)
@@ -107,8 +107,10 @@ class SpiderThread(Thread):
 
 
 def is_any_alive(spider_threads):
-    return any([spider_thread.spider.status == SpiderStatus.WORKING
-                for spider_thread in spider_threads])
+    return any(
+        spider_thread.spider.status == SpiderStatus.WORKING
+        for spider_thread in spider_threads
+    )
 
 
 visited_urls = set()

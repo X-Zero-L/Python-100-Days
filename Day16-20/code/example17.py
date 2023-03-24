@@ -31,7 +31,7 @@ class SetOnceMappingMixin():
 
     def __setitem__(self, key, value):
         if key in self:
-            raise KeyError(str(key) + ' already set')
+            raise KeyError(f'{str(key)} already set')
         return super().__setitem__(key, value)
 
 

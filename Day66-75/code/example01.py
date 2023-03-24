@@ -60,8 +60,9 @@ def start_crawl(seed_url, match_pattern, *, max_depth=-1):
                         if link not in visited_url_list:
                             visited_url_list[link] = depth + 1
                             page_html = get_page_html(link, charsets=('utf-8', 'gbk', 'gb2312'))
-                            headings = get_matched_parts(page_html, r'<h1>(.*)<span')
-                            if headings:
+                            if headings := get_matched_parts(
+                                page_html, r'<h1>(.*)<span'
+                            ):
                                 param_list.append((headings[0], link))
                     cursor.executemany('insert into tb_result values (default, %s, %s)',
                                        param_list)

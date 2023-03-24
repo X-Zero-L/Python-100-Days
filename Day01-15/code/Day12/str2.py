@@ -14,9 +14,7 @@ def reverse_str1(str):
 
 
 def reverse_str2(str):
-    if len(str) <= 1:
-        return str
-    return reverse_str2(str[1:]) + str[0:1]
+    return str if len(str) <= 1 else reverse_str2(str[1:]) + str[:1]
 
 
 def reverse_str3(str):

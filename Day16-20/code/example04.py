@@ -25,9 +25,7 @@ def input_thing():
 def main():
     """主函数"""
     max_weight, num_of_things = map(int, input().split())
-    all_things = []
-    for _ in range(num_of_things):
-        all_things.append(Thing(*input_thing()))
+    all_things = [Thing(*input_thing()) for _ in range(num_of_things)]
     all_things.sort(key=lambda x: x.value, reverse=True)
     total_weight = 0
     total_price = 0

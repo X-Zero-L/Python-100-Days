@@ -7,6 +7,9 @@ from threading import Thread
 def main():
 
     # 自定义线程类
+
+
+
     class FileTransferHandler(Thread):
 
         def __init__(self, cclient):
@@ -14,16 +17,13 @@ def main():
             self.cclient = cclient
 
         def run(self):
-            my_dict = {}
-            my_dict['filename'] = 'guido.jpg'
-            # JSON是纯文本不能携带二进制数据
-            # 所以图片的二进制数据要处理成base64编码
-            my_dict['filedata'] = data
+            my_dict = {'filename': 'guido.jpg', 'filedata': data}
             # 通过dumps函数将字典处理成JSON字符串
             json_str = dumps(my_dict)
             # 发送JSON字符串
             self.cclient.send(json_str.encode('utf-8'))
             self.cclient.close()
+
 
     # 1.创建套接字对象并指定使用哪种传输服务
     server = socket()

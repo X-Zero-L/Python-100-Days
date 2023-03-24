@@ -15,16 +15,11 @@ def nose(x,y):
     begin_fill()
     a = 0.4
     for i in range(120):
-        if 0 <= i < 30 or 60 <= i <90:
-            a = a + 0.08
-            # 向左转3度
-            left(3)
-            # 向前走
-            forward(a)
-        else:
-            a = a - 0.08
-            left(3)
-            forward(a)
+        # 向左转3度
+        left(3)
+        a = a + 0.08 if 0 <= i < 30 or 60 <= i <90 else a - 0.08
+        # 向前走
+        forward(a)
     end_fill()
     penup()
     setheading(90)
@@ -73,14 +68,9 @@ def head(x, y):
     setheading(-30)
     a = 0.4
     for i in range(60):
-        if 0<= i < 30 or 60 <= i < 90:
-            a = a + 0.08
-            lt(3) #向左转3度
-            fd(a) #向前走a的步长
-        else:
-            a = a - 0.08
-            lt(3)
-            fd(a)
+        lt(3) #向左转3度
+        a = a + 0.08 if 0<= i < 30 or 60 <= i < 90 else a - 0.08
+        fd(a) #向前走a的步长
     end_fill()
 
 

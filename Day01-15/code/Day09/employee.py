@@ -67,9 +67,9 @@ if __name__ == '__main__':
     emps = [Manager('武则天'), Programmer('狄仁杰'), Salesman('白元芳')]
     for emp in emps:
         if isinstance(emp, Programmer):
-            working_hour = int(input('请输入%s本月工作时间: ' % emp.name))
+            working_hour = int(input(f'请输入{emp.name}本月工作时间: '))
             emp.set_working_hour(working_hour)
         elif isinstance(emp, Salesman):
-            sales = float(input('请输入%s本月销售额: ' % emp.name))
+            sales = float(input(f'请输入{emp.name}本月销售额: '))
             emp.set_sales(sales)
         print('%s本月月薪为: ￥%.2f元' % (emp.name, emp.get_salary()))

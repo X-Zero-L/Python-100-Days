@@ -47,10 +47,7 @@ class ShoppingCart(object):
 
     @property
     def total(self):
-        val = 0
-        for item in self.items.values():
-            val += item.total
-        return val
+        return sum(item.total for item in self.items.values())
 
 
 def add_to_cart(request, id):

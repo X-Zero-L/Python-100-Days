@@ -4,6 +4,7 @@ from threading import Thread
 
 def main():
 
+
     class RefreshScreenThread(Thread):
 
         def __init__(self, client):
@@ -26,7 +27,7 @@ def main():
             myclient.send(content.encode('utf-8'))
             running = False
         else:
-            msg = nickname + ': ' + content
+            msg = f'{nickname}: {content}'
             myclient.send(msg.encode('utf-8'))
 
 

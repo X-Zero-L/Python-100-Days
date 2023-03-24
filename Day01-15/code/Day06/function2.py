@@ -10,10 +10,14 @@ Date: 2018-03-05
 def gcd(x, y):
     if x > y:
         (x, y) = (y, x)
-    for factor in range(x, 1, -1):
-        if x % factor == 0 and y % factor == 0:
-            return factor
-    return 1
+    return next(
+        (
+            factor
+            for factor in range(x, 1, -1)
+            if x % factor == 0 and y % factor == 0
+        ),
+        1,
+    )
 
 
 def lcm(x, y):

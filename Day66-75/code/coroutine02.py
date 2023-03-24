@@ -13,7 +13,7 @@ def create_delivery_man(name, capacity=1):
             if pkg_name:
                 size += 1
                 buffer.append(pkg_name)
-                print('%s正在接受%s' % (name, pkg_name))
+                print(f'{name}正在接受{pkg_name}')
             else:
                 break
         print('=====%s正在派送%d件包裹=====' % (name, len(buffer)))

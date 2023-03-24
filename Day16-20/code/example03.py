@@ -14,9 +14,7 @@ from time import perf_counter
 def fac(num):
     """求阶乘"""
     assert num >= 0
-    if num in (0, 1):
-        return 1
-    return num * fac(num - 1)
+    return 1 if num in (0, 1) else num * fac(num - 1)
 
 
 def fib2(num):

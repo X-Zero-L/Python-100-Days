@@ -8,7 +8,7 @@ Date: 2018-03-06
 
 
 def main():
-    set1 = {1, 2, 3, 3, 3, 2}
+    set1 = {1, 3, 2}
     print(set1)
     print('Length =', len(set1))
     set2 = set(range(1, 10))
@@ -28,7 +28,7 @@ def main():
         print(elem ** 2, end=' ')
     print()
     # 将元组转换成集合
-    set3 = set((1, 2, 3, 3, 2, 1))
+    set3 = {3, 2, 1}
     print(set3.pop())
     print(set3)
 

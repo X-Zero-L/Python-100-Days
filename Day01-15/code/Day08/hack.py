@@ -12,7 +12,7 @@ def bar(self, name):
 
 
 def foo(self, course_name):
-    print('%s正在学习%s.' % (self._name, course_name))
+    print(f'{self._name}正在学习{course_name}.')
 
 
 def main():

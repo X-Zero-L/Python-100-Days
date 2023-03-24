@@ -19,9 +19,7 @@ class ChartHandler(tornado.websocket.WebSocketHandler):
 def gen_mock_data(num_of_series, num_of_sample):
     data = []
     for _ in range(num_of_series):
-        series = []
-        for _ in range(num_of_sample):
-            series.append(random.randint(50, 500))
+        series = [random.randint(50, 500) for _ in range(num_of_sample)]
         data.append(series)
     return data
 

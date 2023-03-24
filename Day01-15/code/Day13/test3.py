@@ -26,7 +26,7 @@ class Car(object):
         self._color = color
 
     def move(self):
-        if self._x + 80 < 950:
+        if self._x < 870:
             self._x += randint(1, 10)
 
     def draw(self, screen):

@@ -15,10 +15,10 @@ class Father(object):
         self._name = name
 
     def gamble(self):
-        print('%s在打麻将.' % self._name)
+        print(f'{self._name}在打麻将.')
 
     def eat(self):
-        print('%s在大吃大喝.' % self._name)
+        print(f'{self._name}在大吃大喝.')
 
 
 class Monk(object):
@@ -27,10 +27,10 @@ class Monk(object):
         self._name = name
 
     def eat(self):
-        print('%s在吃斋.' % self._name)
+        print(f'{self._name}在吃斋.')
 
     def chant(self):
-        print('%s在念经.' % self._name)
+        print(f'{self._name}在念经.')
 
 
 class Musician(object):
@@ -39,10 +39,10 @@ class Musician(object):
         self._name = name
 
     def eat(self):
-        print('%s在细嚼慢咽.' % self._name)
+        print(f'{self._name}在细嚼慢咽.')
 
     def play_piano(self):
-        print('%s在弹钢琴.' % self._name)
+        print(f'{self._name}在弹钢琴.')
 
 
 # 试一试下面的代码看看有什么区别

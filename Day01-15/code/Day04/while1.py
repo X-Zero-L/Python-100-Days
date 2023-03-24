@@ -6,9 +6,8 @@ Author: 骆昊
 Date: 2018-03-01
 """
 
+
 sum = 0
-num = 1
-while num <= 100:
+for num in range(1, 101):
     sum += num
-    num += 1
 print(sum)

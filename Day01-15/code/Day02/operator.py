@@ -6,12 +6,12 @@ Author: 骆昊
 Date: 2018-02-27
 """
 
-a = 5
+
 b = 10
 c = 3
 d = 4
 e = 5
-a += b
+a = 5 + b
 a -= c
 a *= d
 a /= e
@@ -27,5 +27,5 @@ print("flag2 = ", flag2)
 print("flag3 = ", flag3)
 print("flag4 = ", flag4)
 print("flag5 = ", flag5)
-print(flag1 is True)
-print(flag2 is not False)
+print(flag1)
+print(flag2)

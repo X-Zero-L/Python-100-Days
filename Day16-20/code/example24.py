@@ -28,7 +28,7 @@ async def main():
     async with aiohttp.ClientSession() as session:
         for url in urls:
             html = await fetch(session, url)
-            print(pattern.search(html).group('title'))
+            print(pattern.search(html)['title'])
 
 
 if __name__ == '__main__':

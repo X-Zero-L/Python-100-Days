@@ -18,11 +18,11 @@ class DownloadTask(threading.Thread):
         self._filename = filename
 
     def run(self):
-        print('开始下载%s...' % self._filename)
+        print(f'开始下载{self._filename}...')
         time_to_download = randint(5, 10)
         print('剩余时间%d秒.' % time_to_download)
         sleep(time_to_download)
-        print('%s下载完成!' % self._filename)
+        print(f'{self._filename}下载完成!')
 
 
 def main():

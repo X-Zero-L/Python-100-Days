@@ -24,7 +24,7 @@ def random_select():
     """
     随机选择一组号码
     """
-    red_balls = [x for x in range(1, 34)]
+    red_balls = list(range(1, 34))
     selected_balls = []
     for _ in range(6):
         index = randrange(len(red_balls))

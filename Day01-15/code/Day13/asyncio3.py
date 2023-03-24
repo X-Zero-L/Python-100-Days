@@ -9,7 +9,7 @@ import asyncio
 
 
 async def wget(host):
-    print('wget %s...' % host)
+    print(f'wget {host}...')
     connect = asyncio.open_connection(host, 80)
     # 异步方式等待连接结果
     reader, writer = await connect
@@ -22,7 +22,7 @@ async def wget(host):
         line = await reader.readline()
         if line == b'\r\n':
             break
-        print('%s header > %s' % (host, line.decode('utf-8').rstrip()))
+        print(f"{host} header > {line.decode('utf-8').rstrip()}")
     writer.close()
 
 

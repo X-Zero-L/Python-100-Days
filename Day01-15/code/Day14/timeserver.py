@@ -22,7 +22,7 @@ def main():
         # accept方法返回元组其中的第一个元素是客户端对象
         # 第二个元素是客户端的地址(由IP和端口两部分构成)
         client, addr = server.accept()
-        print(str(addr) + '连接到了服务器.')
+        print(f'{str(addr)}连接到了服务器.')
         # 5.发送数据
         client.send(str(datetime.now()).encode('utf-8'))
         # 6.断开连接

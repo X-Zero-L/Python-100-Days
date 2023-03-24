@@ -114,7 +114,7 @@ def show_search_result(con, cursor):
         contacter = Contacter(**row)
         contacters_list.append(contacter)
         print('[%d]: %s' % (index, contacter.name))
-    if len(contacters_list) > 0:
+    if contacters_list:
         choice = input('是否查看联系人详情?(yes|no)')
         if choice.lower() == 'yes':
             index = int(input('请输入编号: '))
@@ -149,8 +149,7 @@ def find_contacters_by_name(con):
     name = input('联系人姓名: ')
     try:
         with con.cursor() as cursor:
-            cursor.execute(SELECT_CONTACTERS_BY_NAME,
-                           ('%' + name + '%', ))
+            cursor.execute(SELECT_CONTACTERS_BY_NAME, (f'%{name}%', ))
             show_search_result(con, cursor)
     except pymysql.MySQLError as err:
         print(err)

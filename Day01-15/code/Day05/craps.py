@@ -11,6 +11,7 @@ Version: 0.1
 Author: 骆昊
 Date: 2018-03-02
 """
+
 from random import randint
 
 money = 1000
@@ -23,10 +24,10 @@ while money > 0:
             break
     first = randint(1, 6) + randint(1, 6)
     print('玩家摇出了%d点' % first)
-    if first == 7 or first == 11:
+    if first in [7, 11]:
         print('玩家胜!')
         money += debt
-    elif first == 2 or first == 3 or first == 12:
+    elif first in [2, 3, 12]:
         print('庄家胜!')
         money -= debt
     else:

@@ -12,9 +12,9 @@ def main():
     subjs = ['语文', '数学', '英语']
     scores = [[0] * 3] * 5
     for row, name in enumerate(names):
-        print('请输入%s的成绩' % name)
+        print(f'请输入{name}的成绩')
         for col, subj in enumerate(subjs):
-            scores[row][col] = float(input(subj + ': '))
+            scores[row][col] = float(input(f'{subj}: '))
     print(scores)
 #   for row, name in enumerate(names):
 #       print('请输入%s的成绩' % name)

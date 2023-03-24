@@ -32,10 +32,10 @@ def is_prime(num):
     assert num > 0
     if num % 2 == 0:
         return False
-    for i in range(3, int(math.sqrt(num)) + 1, 2):
-        if num % i == 0:
-            return False
-    return num != 1
+    return next(
+        (False for i in range(3, int(math.sqrt(num)) + 1, 2) if num % i == 0),
+        num != 1,
+    )
 
 
 def main():

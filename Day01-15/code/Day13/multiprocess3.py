@@ -18,7 +18,7 @@ def main():
                 # 通过subprocess模块的call函数启动子进程
                 status = subprocess.call(sys.argv[index])
             except FileNotFoundError:
-                print('不能执行%s命令' % sys.argv[index])
+                print(f'不能执行{sys.argv[index]}命令')
     else:
         print('请使用命令行参数指定要执行的进程')
 

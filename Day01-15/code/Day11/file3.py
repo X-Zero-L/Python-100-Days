@@ -11,10 +11,7 @@ from math import sqrt
 
 
 def is_prime(n):
-    for factor in range(2, int(sqrt(n)) + 1):
-        if n % factor == 0:
-            return False
-    return True
+    return all(n % factor != 0 for factor in range(2, int(sqrt(n)) + 1))
 
 
 # 试一试有什么不一样

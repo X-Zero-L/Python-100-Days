@@ -64,8 +64,7 @@ def start_crawl(seed_url, match_pattern, *, max_depth=-1):
             for link in links_list:
                 if link not in visited_url_list:
                     visited_url_list[link] = depth + 1
-                    page_html = get_page_html(link, charsets=charsets)
-                    if page_html:
+                    if page_html := get_page_html(link, charsets=charsets):
                         hasher = hashlib.md5()
                         hasher.update(link.encode('utf-8'))
                         zipped_page = zlib.compress(pickle.dumps(page_html))

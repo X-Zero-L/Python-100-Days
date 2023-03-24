@@ -13,11 +13,11 @@ import _thread
 
 
 def download_task(filename):
-    print('开始下载%s...' % filename)
+    print(f'开始下载{filename}...')
     time_to_download = randint(5, 10)
     print('剩余时间%d秒.' % time_to_download)
     sleep(time_to_download)
-    print('%s下载完成!' % filename)
+    print(f'{filename}下载完成!')
 
 
 def shutdown_hook(start):

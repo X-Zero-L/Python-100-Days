@@ -9,10 +9,7 @@ from math import sqrt
 
 def is_prime(num):
     """判断素数"""
-    for factor in range(2, int(sqrt(num)) + 1):
-        if num % factor == 0:
-            return False
-    return True
+    return all(num % factor != 0 for factor in range(2, int(sqrt(num)) + 1))
 
 
 class PrimeIter(object):
